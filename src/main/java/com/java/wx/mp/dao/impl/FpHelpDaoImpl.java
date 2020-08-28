@@ -3,6 +3,7 @@ package com.java.wx.mp.dao.impl;
 import com.java.wx.mp.dao.FpHelpDao;
 import com.java.wx.mp.model.FpHelp;
 import com.java.wx.mp.util.Page;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -18,6 +19,7 @@ import java.util.Map;
  * @author: ws
  * @time: 2020/8/25 9:29
  */
+@Slf4j
 @Repository
 public class FpHelpDaoImpl implements FpHelpDao {
     @Resource
@@ -44,6 +46,7 @@ public class FpHelpDaoImpl implements FpHelpDao {
                 "%' or errreason like '%" + fpHelp.getKeyWord() + "%' or solution like '%" + fpHelp.getKeyWord() + "%')");
         }
         resultMap.put("sql", sql);
+        log.info("sql:{}", sql.toString());
         return resultMap;
     }
 }

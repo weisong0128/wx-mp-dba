@@ -1,6 +1,8 @@
 package com.java.wx.mp.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @description: 小叮当-FP报错搜索页
@@ -8,6 +10,8 @@ import lombok.Data;
  * @time: 2020/8/24 15:46
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class FpHelp {
     //错误编码
     private String errCode;

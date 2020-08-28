@@ -3,15 +3,10 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://113.31.111.218:5432/test
+    url: jdbc:postgresql://127.0.0.1:5432/test
     username: test
     password: test@dba
     driver-class-name: org.postgresql.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       max-wait: 60000
-
-    #    url: jdbc:mysql://192.168.74.9:3306/fp
-    #    username: root
-    #    password: root
-    #    driver-class-name: com.mysql.cj.jdbc.Driver
